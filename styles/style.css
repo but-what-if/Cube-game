@@ -1,0 +1,166 @@
+* {
+  outline: None;
+  -webkit-user-select: None;
+  -moz-user-select: None;
+  -ms-user-select: None;
+  user-select: None;
+  margin: 0;
+  padding: 0; }
+
+#modal {
+  display: none; }
+  #modal #backGround {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0.8;
+    background-color: black;
+    min-width: 100%;
+    min-height: 100%; }
+  #modal .modal-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    width: 500px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    text-align: center; }
+    #modal .modal-wrapper .modal-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #modal .modal-wrapper .modal-title h3 {
+        padding-left: 20px;
+        background: -webkit-gradient(linear, left top, right top, from(green), color-stop(yellow), color-stop(blue), to(red));
+        background: -webkit-linear-gradient(left, green, yellow, blue, red);
+        background: -o-linear-gradient(left, green, yellow, blue, red);
+        background: linear-gradient(to right, green, yellow, blue, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      #modal .modal-wrapper .modal-title #closeBtn {
+        font-size: 30px;
+        text-align: right;
+        padding-right: 20px;
+        cursor: pointer; }
+    #modal .modal-wrapper .input-name input {
+      padding: 5px;
+      width: 300px;
+      border: 1px solid black;
+      vertical-align: middle; }
+
+body {
+  font-family: 'Goldman', cursive;
+  background-image: url("../images/happy_cubes.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 100vh;
+  width: 100%; }
+  body .main-part {
+    width: 80%; }
+    body .main-part .main-part-header {
+      margin: 10px 0 0 10px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px; }
+      body .main-part .main-part-header .game-title {
+        display: block;
+        font-size: 34px;
+        margin-left: 20px;
+        background: -webkit-gradient(linear, left top, right top, from(green), color-stop(yellow), color-stop(blue), to(red));
+        background: -webkit-linear-gradient(left, green, yellow, blue, red);
+        background: -o-linear-gradient(left, green, yellow, blue, red);
+        background: linear-gradient(to right, green, yellow, blue, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      body .main-part .main-part-header .buttons-point-time-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 50px 0 20px; }
+        body .main-part .main-part-header .buttons-point-time-container .buttons {
+          margin-top: 20px; }
+          body .main-part .main-part-header .buttons-point-time-container .buttons .btn {
+            margin-left: 20px; }
+        body .main-part .main-part-header .buttons-point-time-container .points {
+          font-size: 24px; }
+          body .main-part .main-part-header .buttons-point-time-container .points .points-screen {
+            text-align: center;
+            border: 1px solid black; }
+        body .main-part .main-part-header .buttons-point-time-container .time-left {
+          font-size: 24px; }
+          body .main-part .main-part-header .buttons-point-time-container .time-left .time-left-screen {
+            text-align: center;
+            border: 1px solid black; }
+    body .main-part .game-board {
+      position: relative;
+      margin: 10px 0 0 10px;
+      height: 100%;
+      max-height: 500px;
+      overflow: hidden;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px; }
+      body .main-part .game-board .start-game-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: -webkit-gradient(linear, left top, right top, from(green), color-stop(yellow), color-stop(blue), to(red));
+        background: -webkit-linear-gradient(left, green, yellow, blue, red);
+        background: -o-linear-gradient(left, green, yellow, blue, red);
+        background: linear-gradient(to right, green, yellow, blue, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      body .main-part .game-board .finish-game-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 100%);
+        -ms-transform: translate(-50%, 100%);
+        transform: translate(-50%, 100%); }
+  body .info-part {
+    width: 20%; }
+    body .info-part .info-part-header {
+      margin: 10px 10px 0 10px;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px; }
+      body .info-part .info-part-header .cube-info img {
+        width: 30px;
+        height: 30px; }
+    body .info-part .result-table {
+      margin: 10px 10px 0 10px;
+      padding: 10px;
+      max-height: 500px;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px; }

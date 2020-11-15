@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catch cubes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+
+<!-- Modal -->
+    <div id="modal">
+        <div id="backGround"></div>
+        <div class="modal-wrapper">
+            <div class="modal-title">
+                <h3>Good Job!!!</h3>
+                <div id="closeBtn" title="Close" onclick="closeModal()">&times;</div>
+            </div>
+            <p class="result-points" id="result-points">Your points: </p>
+            <div class="input-name">
+                <input type="text" placeholder="Input your name here" id="input-name">
+                <button type="button" class="btn btn-primary" id="add-to-table" onclick="addResult(`   ${inputName.value}: ${pointsScreen.textContent}`), closeModal()">SAVE RESULT</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="main-part">
+        <div class="main-part-header">
+            <h3 class="game-title">Catch cubes!</h3>
+            <div class="buttons-point-time-container">
+                <div class="buttons">
+                    <button onclick="startGame()" type="button" class="btn btn-primary" id="start-btn">START</button>
+                    <button onclick="startNewGame()" type="button" class="btn btn-primary" id="new-game-btn">NEW GAME</button>
+                </div>
+                <div class="points">
+                    <p class="points-title">Points</p>
+                    <p class="points-screen" id="points-screen">0</p>
+                </div>
+                <div class="time-left">
+                    <p class="time-left-title">Time left</p>
+                    <p class="time-left-screen" id="time-left-screen">01:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="game-board" id="game-board">
+            <h1 class="start-game-title">Press "START" for playing</h1>
+        </div>
+    </section>
+    <section class="info-part">
+        <div class="info-part-header">
+            <h3 class="info-title">Cubes:</h3>
+            <p class="cube-info red-cube"><img src="images/red_cube.jpg" alt="red cube"> x 10 points</p>
+            <p class="cube-info yellow-cube"><img src="images/yellow_cube.jpg" alt="yellow cube"> x 12 points</p>
+            <p class="cube-info green-cube"><img src="images/green_cube.jpg" alt="green cube"> x 14 points</p>
+            <p class="cube-info blue-cube"><img src="images/blue_cube.jpg" alt="blue cube"> x 20 points</p>
+        </div>
+        <div class="result-table">
+            <h3 class="result-table-title">Results</h3>
+            <div class="result-table-inner" id="result-table"></div>
+            <button onclick="removeAllResults()" type="button" class="btn btn-primary" id="clear-btn">CLEAR</button>
+        </div>
+    </section>
+
+    <script src="JS/app.js" type=""></script>
+</body>
+</html>
