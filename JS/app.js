@@ -1,33 +1,5 @@
 'use strict'
 
-// class GameCube {
-//
-//   constructor(time) {
-//     this.time = time;
-//     this.gameBoard = document.getElementById('game-board');
-//     this.start = document.getElementById('start-btn');
-//     this.newGame = document.getElementById('new-game-btn');
-//     this.pointsScreen = document.getElementById('points-screen');
-//     this.timeScreen = document.getElementById('time-left-screen');
-//     this.resultTable = document.getElementById('result-table');
-//   }
-//
-//   countDown() {
-//     let minutes = Math.floor(this.time / 60) < 10 ? '0' + Math.floor(this.time / 60): Math.floor(this.time / 60);
-//     let seconds = this.time % 60 < 10 ? '0' + this.time % 60: this.time % 60;
-//     this.timeScreen.innerHTML = `${minutes}:${seconds}`
-//     this.time --
-//   }
-//
-//   startGame() {
-//     console.log(this.timeScreen);
-//     setInterval(this.countDown, 1000)
-//   }
-//
-//
-// }
-//
-// let cube = new GameCube(60)
 
 
 let time = 59;
